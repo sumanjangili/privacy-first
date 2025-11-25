@@ -31,7 +31,8 @@ function App() {
 
     // 1️⃣ Encrypt with the server’s public key (sealed box)
     const ciphertext = encryptMessage(msg, SERVER_PUBLIC_KEY_B64);
-
+    console.log('🔐 ciphertext to send →', ciphertext);
+ 
     // 2️⃣ POST to the server
     const resp = await fetch(SERVER_URL, {
       method: 'POST',
